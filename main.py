@@ -11,8 +11,14 @@ class KMeansClustering:
     def euclidean_distance(data_point, centroids):
         return np.sqrt(np.sum((centroids - data_point)**2, axis = 1))
 
-    def fit(self, X, max_iterations=200): #выбирать центры между min и max данными
-        self.centroids = np.random.uniform(np.amin(X, axis=0), np.amax(X, axis=0), size=(self.k, X.shape[1]))
+    #def fit(self, X, max_iterations=200): #выбирать центры между min и max данными
+    #    self.centroids = np.random.uniform(np.amin(X, axis=0), np.amax(X, axis=0), size=(self.k, X.shape[1]))
+
+    def fit(self, X, max_iterations=200, centroids=None):  # выбирать центры между min и max данными
+        if centroids is not None:  # если центроиды переданы, то использовать их
+                self.centroids = centroids
+        else:  # если нет, то случайно выбрать центры между min и max данными
+                self.centroids = np.random.uniform(np.amin(X, axis=0), np.amax(X, axis=0), size=(self.k, X.shape[1]))
 
         initial_centroids = self.centroids.copy()
 
@@ -72,4 +78,7 @@ plt.scatter(kmeans.centroids[:, 0], kmeans.centroids[:,1], c=range(len(kmeans.ce
 plt.title("Final clusters")
 
 plt.show()
+
+
+
 
