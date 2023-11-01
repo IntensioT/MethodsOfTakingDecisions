@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lab 7</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>РАСПОЗНАВАНИЕ ОБЪЕКТОВ С ПОМОЩЬЮ СИНТАКСИЧЕСКИХ МЕТОДОВ</h1>
+
+    <form>
+      <label for="terminals">Набор терминалов:</label>
+      <select id="terminals" name="terminals" onchange="handleTerminalChange()">
+        <option value="Head">Голова</option>
+        <option value="Body">Туловище</option>
+        <option value="LeftHand">Левая рука</option>
+        <option value="RightHand">Правая рука</option>
+        <option value="legs">Ноги</option>
+      </select>
+    </form>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
