@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Lab 7</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <h1>РАСПОЗНАВАНИЕ ОБЪЕКТОВ С ПОМОЩЬЮ СИНТАКСИЧЕСКИХ МЕТОДОВ</h1>
 
     <form>
       <label for="terminals">Набор терминалов:</label>
-      <select id="terminals" name="terminals" onchange="handleTerminalChange()">
-        <option value="Head">Голова</option>
-        <option value="Body">Туловище</option>
-        <option value="LeftHand">Левая рука</option>
-        <option value="RightHand">Правая рука</option>
-        <option value="legs">Ноги</option>
+      <select id="terminals" name="terminals"">
+        <option value="leftEye">Левый глаз</option>
+        <option value="leftSocket">Левая глазница</option>
+        <option value="rightEye">Правый глаз</option>
+        <option value="rightSocket">Правая глазница</option>
+        <option value="mouse">Рот</option>
       </select>
+      <button type="button" onclick="clearImages()">Очистить</button>
+      <button type="button" onclick="checkTerminals()">Проверить</button>
+      <div id="resultContainer"></div>
     </form>
+
+    <div id="imageContainer" style="position: relative;" onclick="handleContainerClick(event)"></div>
 
     <script src="scripts/main.js"></script>
   </body>

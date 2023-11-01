@@ -21,15 +21,47 @@ html {
 }
 
 body {
-  width: 70%;
+  width: 50%;
+  height: 97vh;
   margin: 0 auto ;
   background-color: #ffffff;
   padding: 0 20px 20px 20px;
   border: 3px solid black;
+  align-items: center;
 }
 
 h1 {
   margin: 0;
   padding: 20px 0;
   color: #000000;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+select {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+#imageContainer {
+  position: relative;
+  margin: 200px auto;
+  width: 99%;
+  height: 800px;
+  border: 1px solid #ccc;
+}
+
+#imageContainer img {
+  position: absolute;
 }
